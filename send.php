@@ -42,12 +42,12 @@ if (in_array($username, $existingUsernames)) {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'billiezmailer@gmail.com';
-    $mail->Password = 'jawmumfijhtbvteh';
+    $mail->Username = 'YOUR_USERNAME';
+    $mail->Password = 'YOUR_PASSWORD';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
-    $mail->setFrom('billiezmailer@gmail.com');
+    $mail->setFrom('YOUR_EMAIL');
 
     $mail->addAddress($email);
 
