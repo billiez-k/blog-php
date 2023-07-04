@@ -2,6 +2,8 @@
 
 This repository contains a blog page that allows user to record down daily activities.
 
+View demo: http://photograph.eu.org/blog/index.php
+
 <h1>Features:</h1>
 
 <h2>1. PHP Mailing System</h2>
