@@ -12,31 +12,17 @@ require 'phpmailer/src/SMTP.php';
 if(isset($_SESSION['folderName']) && isset($_SESSION['done'])){
     $mail = new PHPMailer(true);
     $body = 'Your personalized billiez blog URL: http://photograph.eu.org/blog/'.$_SESSION['folderName'].'/index.php <br><br> Your password: <br>'.$_SESSION['password'].'<br><br>Please do not tell your user credentials to others. If your secret messages got exposed or edited, please contact billiez. Billiez will take a picture of it to record this memorable moment for you. Thanks!<br><hr><br>
-<table border="0" cellspacing="3" cellpadding="0" style="width:100%">
-<tbody><tr>
-<td valign="bottom" style="width:25.7%;padding:0.75pt">
-<p style="font-size:11pt;font-family:Calibri,sans-serif;margin:0 0 12pt 0;line-height:105%"><span style="color:#6d92d6;font-size:10pt;line-height:105%">Billy Kwan</span><span style="font-size:7pt;line-height:105%"><br aria-hidden="true">
-<span style="color:#626469">YouTuber</span><br aria-hidden="true">
-<span style="color:#626469">Craftguy</span><br aria-hidden="true">
-<span style="color:#626469">CUHK</span></span></p></td>
-<td valign="bottom" style="width:41.2%;padding:0.75pt">
-<p style="font-size:11pt;font-family:Calibri,sans-serif;margin:0 0 12pt 0;line-height:105%"><span style="color:#5982cf;font-size:7pt;line-height:105%">T&nbsp;&nbsp;</span><span style="color:#626469;font-size:7pt;line-height:105%">852-25136738</span><span style="font-size:7pt;line-height:105%"><br aria-hidden="true">
-<span style="color:#5982cf">P&nbsp;&nbsp;</span><span style="color:#626469">852-95323828</span><br aria-hidden="true">
-<span style="color:#5982cf">E&nbsp;&nbsp;</span></span><span style="font-size:11pt;line-height:105%"><a href="mailto:mail@craftguy.eu.org" rel="noopener noreferrer" target="_blank"><span style="color:#626469;font-size:7pt;line-height:105%">mail@craftguy.eu.org</span></a></span><span style="font-size:7pt;line-height:105%"></span></p></td>
-<td valign="bottom" style="width:33%;padding:0.75pt">
-<p align="right" style="font-size:11pt;font-family:Calibri,sans-serif;text-align:right;margin:0 0 12pt 0;line-height:105%"><span style="color:#626469;font-size:7pt;line-height:105%">G/F<br aria-hidden="true">Tung Chun Court<br aria-hidden="true">
-Shau Kei Wan, HK</span><span style="font-size:7pt;line-height:105%"></span></p></td></tr></tbody></table>
-<img src="cid:craftguy" style="width:100%"></div>';
+';
 
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'billiezmailer@gmail.com';
-    $mail->Password = 'jawmumfijhtbvteh';
+    $mail->Username = 'YOUR_USERNAME';
+    $mail->Password = 'YOUR_PASSWORD';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
-    $mail->setFrom('billiezmailer@gmail.com');
+    $mail->setFrom('YOUR_EMAIL');
 
     $mail->addAddress($_SESSION['email']);
 
