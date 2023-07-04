@@ -2,7 +2,7 @@
 
 This repository contains a blog page that allows user to record down daily activities.
 
-Features:
+<h1>Features:</h1>
 
 <h2>1. PHP Mailing System</h2>
    - The blog page uses PHP Mailer, a github project, to send mail via PHP<br>
